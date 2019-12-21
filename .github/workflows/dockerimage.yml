@@ -8,7 +8,7 @@ jobs:
     - name: Publishe to registry
       uses: elgohr/Publish-Docker-Github-Action@master
       with:
-        name: gkarthics/whereami:$(date +%s)
+        name: gkarthics/whereami
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
         registry: docker.pkg.github.com
