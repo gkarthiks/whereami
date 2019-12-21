@@ -1,0 +1,13 @@
+name: Publish Docker Image to DockerHub
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Publishe to registry
+      uses: elgohr/Publish-Docker-Github-Action@master
+      with:
+        name: gkarthics/whereami
+        username: ${{ secrets.DOCKERHUB_UNAME }}
+        password: ${{ secrets.DOCKERHUB_PASSWORD }}
