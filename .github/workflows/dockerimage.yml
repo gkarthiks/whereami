@@ -8,6 +8,6 @@ jobs:
     - name: Publishe to registry
       uses: elgohr/Publish-Docker-Github-Action@master
       with:
-        name: gkarthiks/whereami/whereami
-        repo-token: ${{ secrets.REPO_TOKEN }}
-        registry: docker.pkg.github.com
+        name: gkarthics/whereami
+        username: ${{ secrets.DOCKERHUB_UNAME }}
+        password: ${{ secrets.DOCKERHUB_PASSWORD }}
